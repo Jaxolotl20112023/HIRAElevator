@@ -1,6 +1,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 import frc.robot.States.ElevatorStates;
 import frc.robot.subsystems.Elevator;
@@ -19,7 +20,8 @@ public class ElevatorCommand extends Command{
         return elevator_state; 
     }
 
-    public void set_elevator_state() {
-
+    public InstantCommand set_elevator_state(ElevatorStates elevator_state) {
+        this.elevator_state = elevator_state; 
+        return new InstantCommand(()-> s_elevator.set_state(elevator_state),s_elevator); 
     }
 }
