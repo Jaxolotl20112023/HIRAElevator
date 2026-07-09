@@ -6,9 +6,9 @@ public class States {
         UP(0.15),
         DOWN(-0.15);
 
-        public final int speed; 
+        public final double speed; 
 
-        ElevatorStates(int speed) {
+        ElevatorStates(double speed) {
             this.speed = speed; 
         }
     }
