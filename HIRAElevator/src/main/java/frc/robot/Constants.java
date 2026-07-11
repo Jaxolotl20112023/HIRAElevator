@@ -18,6 +18,6 @@ public final class Constants {
   }
 
   public static class ElevatorConstants { 
-    public static final int device_id = 0; 
+    public static final int device_id = 1; 
   }
 }

@@ -3,8 +3,9 @@ package frc.robot;
 public class States {
 
     public enum ElevatorStates {
-        UP(0.15),
-        DOWN(-0.15);
+        UP(0.05),
+        DOWN(-0.05),
+        STOP(0); 
 
         public final double speed; 
 
